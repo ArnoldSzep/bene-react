@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Link to the live build: [The result](https://brainpeace.github.io/bene-react/build/).
 
 ## Available Scripts
 
