@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../assets/img/logo.svg';
 import './App.css';
+import MultiInput from '../MultiInput/MultiInput';
 
 class App extends Component {
   render() {
@@ -12,6 +13,8 @@ class App extends Component {
         <p className="App-intro">
           Ttest test o get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        
+        <MultiInput />
       </div>
     );
   }
