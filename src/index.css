@@ -1,33 +1,159 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #333;
 }
 
-.App {
-  text-align: center;
+.container {
+    padding: 20px;
+    max-width: 1100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.cl {
+    display: block;
+    clear: both;
 }
 
-.App-header {
-  background-color: #222;
-  padding: 20px;
-  color: white;
+/* logo */
+.header {
+    background-color: #222;
+    padding: 10px;
+    color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.header-logo {
+    display: block;
+    margin: auto;
+    animation: logo-spin infinite 10s linear;
 }
 
-.App-intro {
-  font-size: large;
+@keyframes logo-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* multi input wrap */
+.multi_input {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    margin: 40px auto;
+}
+
+.multi_input h1 {
+    margin: 0;
+}
+
+.multi_input-sidebar {
+    padding: 20px;
+}
+
+.multi_input-inputs {
+    padding: 20px;
+    overflow: hidden;
+}
+
+@media (min-width: 40em) {
+    .multi_input-sidebar {
+        float: left;
+        width: 200px;
+    }
+}
+
+.multi_input-footer {
+    border-top: 1px solid #ddd;
+    background: #e8f0fe;
+    text-align: right;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.multi_input-footer button {
+    display: inline-block;
+    border: 0;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 14px;
+    color: #999;
+    transition: background-color .2s, color .2s;
+}
+
+.multi_input-footer button:nth-child(2n) {
+    color: #3b67d6;
+}
+
+.multi_input-footer button:hover {
+    color: #fff;
+    background: #3b67d6;
+}
+
+/* inputs */
+.input_wrap {
+    margin-bottom: 20px;
+    padding-right: 40px;
+    position: relative;
+}
+
+.input_wrap input {
+    display: block;
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    border-bottom: 2px solid #eee;
+    box-sizing: border-box;
+    transition: border .2s;
+}
+
+.input_wrap label {
+    display: block;
+    padding-bottom: 6px;
+    font-size: 13px;
+    color: #999;
+    transition: color .2s;
+}
+
+.input_wrap button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #999;
+    cursor: pointer;
+}
+
+.input_wrap button:hover {
+    background: #eee;
+}
+
+.input_wrap button img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 44%;
+    max-height: 44%;
+}
+
+.input_wrap.active label {
+    color: #3b67d6;
+}
+
+.input_wrap.active input {
+    border-bottom: 2px solid #3b67d6;
 }
