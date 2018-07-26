@@ -24,7 +24,7 @@ class App extends React.Component {
         });
     }
 
-    save(array) {
+    save = (array) => {
         var arrayCopy = array.slice();
         if (arrayCopy[arrayCopy.length - 1] === '') {
             arrayCopy.splice(arrayCopy.length - 1, 1);
@@ -34,8 +34,7 @@ class App extends React.Component {
             savedArray: arrayCopy
         });
     }
-
-    update(ev, key) {
+    update = (ev, key) => {
         var inputArray = this.state.inputArray;
 
         inputArray[key] = ev.target.value;
@@ -47,14 +46,14 @@ class App extends React.Component {
         this.setState({ inputArray: inputArray });
     }
 
-    remove(key) {
+    remove = (key) => {
         var inputArray = this.state.inputArray;
         inputArray.splice(key, 1);
 
         this.setState({ inputArray: inputArray });
     }
 
-    reset(array) {
+    reset = (array) => {
         this.setState({
             inputArray: this.startState.slice()
         });
@@ -78,10 +77,10 @@ class App extends React.Component {
                 <div className="container">
                     <MultiInput
                         inputArray={this.state.inputArray}
-                        update={this.update.bind(this)}
-                        reset={this.reset.bind(this)}
-                        remove={this.remove.bind(this)}
-                        onChange={this.save.bind(this)} />
+                        update={this.update}
+                        reset={this.reset}
+                        remove={this.remove}
+                        onChange={this.save} />
 
                     <ol>
                         {this.savedItems}
